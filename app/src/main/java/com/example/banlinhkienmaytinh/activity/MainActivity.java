@@ -243,7 +243,7 @@ public class MainActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                     }
-                    mangloaisp.add(3,new Loaisp(0, "Liên Hệ", "http://capnuocbenthanh.com/images/dtlienhe_1.jpg"));
+                    mangloaisp.add(3,new Loaisp(0, "Góp Ý", "http://capnuocbenthanh.com/images/dtlienhe_1.jpg"));
                     mangloaisp.add(4,new Loaisp(0, "Thông Tin", "http://kinhtevadubao.vn/uploads/images/news/1515687283_news_10383.jpg"));
                     mangloaisp.add(5,new Loaisp(0, "Chế Độ Tối", "https://media.doublerew.net/site/v2/optimized/uploads/icons/smartdarkmode-appicon.png.0x320_q85_crop-scale.png"));
                     mangloaisp.add(6,new Loaisp(0, "Đăng Xuất", "https://icons.iconarchive.com/icons/custom-icon-design/flatastic-9/48/Logout-icon.png"));

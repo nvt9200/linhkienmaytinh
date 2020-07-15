@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Login"
+            android:text="Đăng Nhập"
             android:textSize="30sp"
             android:textStyle="bold"
             android:layout_marginTop="10dp"
@@ -35,7 +35,7 @@
             android:layout_marginTop="50dp"
             app:met_floatingLabel="normal"
             android:background="@android:color/white"
-            android:hint="Email Address"
+            android:hint="Email"
             android:inputType="textEmailAddress"/>
         <com.rengwuxian.materialedittext.MaterialEditText
             android:id="@+id/password"
@@ -47,13 +47,13 @@
             app:met_floatingLabel="normal"
             android:layout_marginTop="10dp"
             android:background="@android:color/white"
-            android:hint="Password"
+            android:hint="Mật Khẩu"
             android:inputType="textPassword"/>
 
         <androidx.appcompat.widget.AppCompatCheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Keep Me Logged In"
+            android:text="Giữ tôi luôn đăng nhập"
             android:buttonTint="@color/colorPrimaryDark"
             android:textColor="@color/colorPrimaryDark"
             android:layout_gravity="center"
@@ -66,7 +66,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
-            android:text="Login"
+            android:text="Đăng Nhập"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
             android:id="@+id/login"
@@ -78,7 +78,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
-            android:text="Register"
+            android:text="Đăng Kí"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
             android:id="@+id/register"

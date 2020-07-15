@@ -1,9 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.LienHeActivity">
+    android:orientation="vertical"
+    android:background="#0C2C95"
+    tools:context=".activity.LienHeActivity"
+    style="@style/parent.contentLayout">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolGopY"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/darkTextColor"
+        app:title="Góp Ý"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+    </androidx.appcompat.widget.Toolbar>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/boder"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#151722"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Thông tin khách hàng"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#151722"
+                android:id="@+id/textviewtongtien"
+                android:text="Tên khách hàng"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#151722"
+                android:id="@+id/textviewEmailKH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#151722"
+                android:id="@+id/textviewsdt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Số điện thoại"
+                android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#151722"
+                android:id="@+id/edittextgopy"
+                android:inputType="textMultiLine"
+                android:hint="Nhập góp ý"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+
+                android:layout_marginRight="70dp"
+                android:background="@drawable/switch_radius"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:id="@+id/buttonxacnhan"
+                android:text="Góp Ý"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:background="@drawable/switch_radius"
+                android:textColor="@color/whiteTextColor"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:id="@+id/buttontrove"
+                android:text="Trở về"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

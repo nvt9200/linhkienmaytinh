@@ -75,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
         final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
         progressDialog.setCancelable(false);
         progressDialog.setIndeterminate(false);
-        progressDialog.setTitle("Registering New Account");
+        progressDialog.setTitle("Đăng nhập ...");
         progressDialog.show();
         String uRl = "https://nvt9200.000webhostapp.com/server/login.php";
         StringRequest request = new StringRequest(Request.Method.POST, uRl, new Response.Listener<String>() {

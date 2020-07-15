@@ -5,9 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.RegisterActivity">
+
     <include
         android:id="@+id/toolbar"
-        layout="@layout/bar_layout"/>
+        layout="@layout/bar_layout"
+        />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Create New Account"
+            android:text="Tạo Tài Khoản Mới"
             android:gravity="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20dp"
@@ -26,7 +29,7 @@
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="User Name"
+            android:hint="Tên "
             app:met_floatingLabel="normal"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
@@ -37,7 +40,7 @@
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email Address"
+            android:hint="Email"
             app:met_floatingLabel="normal"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
@@ -48,7 +51,7 @@
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="Mật khẩu"
             app:met_floatingLabel="normal"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
@@ -60,7 +63,7 @@
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Mobile"
+            android:hint="Số điện thoại"
             app:met_floatingLabel="normal"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
@@ -82,7 +85,7 @@
                 android:textStyle="bold"
                 android:textSize="14sp"
                 android:textColor="@color/colorPrimaryDark"
-                android:text="Male"
+                android:text="Nam"
                 android:buttonTint="@color/colorPrimaryDark"
                 android:id="@+id/male"/>
             <RadioButton
@@ -92,7 +95,7 @@
                 android:textSize="14sp"
                 android:buttonTint="@color/colorPrimaryDark"
                 android:textColor="@color/colorPrimaryDark"
-                android:text="Female"
+                android:text="Nữ"
                 android:layout_marginTop="10dp"
                 android:id="@+id/female"/>
         </RadioGroup>
@@ -104,7 +107,7 @@
             android:background="@color/colorPrimaryDark"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:text="Register"
+            android:text="Đăng kí"
             android:textColor="@android:color/white"
             android:textAllCaps="false"
             android:id="@+id/register"/>

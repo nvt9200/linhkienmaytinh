@@ -33,21 +33,18 @@ public class RegisterActivity extends AppCompatActivity {
     MaterialEditText userName,emailAddress,password,mobile;
     RadioGroup radioGroup;
     Button register;
+    Toolbar toolbarregister;
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Register");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbarregister = findViewById(R.id.toolbar);
         userName = findViewById(R.id.username);
         emailAddress = findViewById(R.id.email);
         password = findViewById(R.id.password);
         mobile = findViewById(R.id.mobile);
         radioGroup = findViewById(R.id.radioButton);
-
         register = findViewById(R.id.register);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,13 +56,13 @@ public class RegisterActivity extends AppCompatActivity {
                 String txtMobile = mobile.getText().toString();
                 if (TextUtils.isEmpty(txtPassword) || TextUtils.isEmpty(txtEmail) ||
                         TextUtils.isEmpty(txtPassword) || TextUtils.isEmpty(txtMobile)){
-                    Toast.makeText(RegisterActivity.this, "All fields required", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Lỗi : Điền đầy đủ các thông tin", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     int genderId = radioGroup.getCheckedRadioButtonId();
                     RadioButton selected_Gender = radioGroup.findViewById(genderId);
                     if (selected_Gender == null) {
-                        Toast.makeText(RegisterActivity.this, "Select gender please",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, "Lỗi : Giới tính đang trống",Toast.LENGTH_SHORT).show();
                     }
 
                     else {
@@ -77,11 +74,21 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-
+        Actionbar();
 
     }
 
-
+    private void Actionbar() {
+        setSupportActionBar(toolbarregister);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbarregister.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+                finish();
+            }
+        });
+    }
 
     private void registerNewAccoutn(final String username, final String email, final String password, final String mobile, final String gender){
         final ProgressDialog progressDialog = new ProgressDialog(RegisterActivity.this);
@@ -98,7 +105,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if (response.equals("You are registered successfully")){
                     progressDialog.dismiss();
                     Toast.makeText(RegisterActivity.this, response, Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(RegisterActivity.this,MainActivity.class));
+                    startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
                     finish();
                 }else {
                     progressDialog.dismiss();

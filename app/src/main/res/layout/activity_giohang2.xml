@@ -25,6 +25,7 @@
                 android:layout_gravity="center"
                 android:id="@+id/textviewthongbao"
                 android:textSize="20sp"
+                android:textColor="@color/contentTextColor"
                 android:text="Giỏ hàng bạn đang trống"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
